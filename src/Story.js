@@ -2,15 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class Story extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="Story">
-        <Link to={props.url}>
-          <h1> {props.title} </h1>
-        </Link>
+        <a href={this.props.hit.url}>
+          <h1> {this.props.hit.title} </h1>
+        </a>
       </div>
     );
   }
